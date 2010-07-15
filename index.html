@@ -1,57 +1,130 @@
-<html>
-<head><title>driedtoast</title>
-
- <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection">
-    <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
-    <!--[if IE]>
-        <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection">
-    <![endif]-->
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection">
-
-
-</head>
-<body>
-
-
- <div class="container"> 
-    <div class="span-16 colborder"> 
-      <h1>driedtoast</h1> 
-	<p>
-	Right now this page is nothing more than me experimenting with <a href="http://www.bluetrip.com">bluetrip</a> 
-	to use in a couple projects I'm working on. 
-	</p>
-	<p class="notice"><img src="images/icons/information.png" alt=""/> This is an experiment </p>
-    </div>
-<div class="span-7 last">
-      <h1 class="fancy">side bar</h1>
-	<code>print('projects below');</code>
-	<dl>
-	 	<dd> <a href="http://driedtoast.github.com/pytoaster/">pytoaster</a></dd>
-	 	<dd> <a href="http://www.github.com/driedtoast/socialgraph">socialgraph</a></dd>
-	 	<dd> <a href="http://www.github.com/driedtoast/socialgraphui">socialgraph ui</a></dd>
-	 	<dd> <a href="http://www.github.com/driedtoast/teaparty">teaparty</a></dd>
-	</dl>
-
-    </div>
-
-
-    <div class="span-2">&nbsp;</div> 
-   <div class="span-8"> 
-      <p class="success">box one</p> 
-    </div>
-    <div class="span-2">&nbsp;</div> 
-    <div class="span-8 last"> 
-      <p class="error">box two</p> 
-    </div>
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> 
+	<head> 
+		<title>driedtoast - projects</title> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+        <meta name="description" content="opensource project for daniel marchant" /> 
+        <meta name="keywords" content="java, aws management, aws console, social, graphdb, python, bottle, framework"/> 
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen"> 
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+		<script src="js/cufon-yui.js" type="text/javascript"></script> 
+		<script src="js/BabelSans_500.font.js" type="text/javascript"></script> 
+		<script src="js/jquery.easing.1.3.js" type="text/javascript"></script> 
+		<script type="text/javascript"> 
+			$(function() {
+				Cufon.replace('a, span').CSS.ready(function() {
+					var $menu 		= $("#slidingMenu");
+					
+					/**
+					* the first item in the menu, 
+					* which is selected by default
+					*/
+					var $selected	= $menu.find('li:first');
+					
+					/**
+					* this is the absolute element,
+					* that is going to move across the menu items
+					* it has the width of the selected item
+					* and the top is the distance from the item to the top
+					*/
+					var $moving		= $('<li />',{
+						className	: 'move',
+						top			: $selected[0].offsetTop + 'px',
+						width		: $selected[0].offsetWidth + 'px'
+					});
+					
+					/**
+					* each sliding div (descriptions) will have the same top
+					* as the corresponding item in the menu
+					*/
+					$('#slidingMenuDesc > div').each(function(i){
+						var $this = $(this);
+						$this.css('top',$menu.find('li:nth-child('+parseInt(i+2)+')')[0].offsetTop + 'px');
+					});
+					
+					/**
+					* append the absolute div to the menu;
+					* when we mouse out from the menu 
+					* the absolute div moves to the top (like innitially);
+					* when hovering the items of the menu, we move it to its position 
+					*/
+					$menu.bind('mouseleave',function(){
+							moveTo($selected,400);
+						  })
+						 .append($moving)
+						 .find('li')
+						 .not('.move')
+						 .bind('mouseenter',function(){
+							var $this = $(this);
+							var offsetLeft = $this.offset().left - 20;
+							//slide in the description
+							$('#slidingMenuDesc > div:nth-child('+ parseInt($this.index()) +')').stop(true).animate({'width':offsetLeft+'px'},400, 'easeOutExpo');
+							//move the absolute div to this item
+							moveTo($this,400);
+						  })
+						  .bind('mouseleave',function(){
+							var $this = $(this);
+							var offsetLeft = $this.offset().left - 20;
+							//slide out the description
+							$('#slidingMenuDesc > div:nth-child('+ parseInt($this.index()) +')').stop(true).animate({'width':'0px'},400, 'easeOutExpo');
+						  });;
+					
+					/**
+					* moves the absolute div, 
+					* with a certain speed, 
+					* to the position of $elem
+					*/
+					function moveTo($elem,speed){
+						$moving.stop(true).animate({
+							top		: $elem[0].offsetTop + 'px',
+							width	: $elem[0].offsetWidth + 'px'
+						}, speed, 'easeOutExpo');
+					}
+				}) ;
+			});
+		</script> 
+		<style> 
+          span.reference{
+              position:fixed;
+              left:10px;
+              bottom:10px;
+              font-size:14px;
+          }
+          span.reference a{
+              color:#aaa;
+              text-decoration:none;
+          }
+		</style> 
+	</head> 
+	<body> 
+			
+        <div> 
+		</div> 
+		
+		<div id="slidingMenuDesc" class="slidingMenuDesc"> 
+			<div><span>simple python container for projects</span></div> 
+			<div><span>aws administration console</span></div> 
+			<div><span>opensocial experimentations with neo4j db</span></div> 
+			<div><span>simple ui for social graph</span></div> 
+			<div><span>odds and ends</span></div> 
+		</div> 
+	
+		<ul id="slidingMenu" class="slidingMenu"> 
+			<li><a href="http://www.linkedin.com/in/dmarchant">about</a></li> 
+			<li><a href="http://driedtoast.github.com/pytoaster">pytoaster</a></li> 
+			<li><a href="http://driedtoast.github.com/teaparty">teaparty</a></li> 
+			<li><a href="http://driedtoast.github.com/socialgraph">socialgraph</a></li> 
+			<li><a href="http://github.com/driedtoast/socialgraphui">socialgraphui</a></li> 
+			<li><a href="http://github.com/driedtoast/variouscrumbs">variouscrumbs</a></li> 
+		</ul> 
+		
  
-
-    <div class="span-24 last" >
-   <h1 class="fancy">bottom</h1>
-	<p class="notice"> some bottom stufff</p>
-	</div>
- </div>
-
-
-</body>
-</html>
+	</body> 
+</html> 
+ 
+ 
+ 
+ 
+ 
+ 
