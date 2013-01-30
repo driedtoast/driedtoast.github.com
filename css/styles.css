@@ -7,7 +7,7 @@ ul{
 }
 body{
 	/* background:#292929; */
-	background:#006284;
+	background-image: url('http://driedtoast.github.com/random-experiments/images/e037dc5b.texture.jpg');
 
 }
 .slidingMenu {
@@ -34,6 +34,12 @@ body{
 	margin-top:2px;
 	z-index: 8;
 	position: absolute;    
+	
+	
+	color: #ddd;
+	background-color: rgba(66,47,2,.35);
+	
+	/* 
 	background: #FFC829;     
 	background: 
 		-webkit-gradient(
@@ -49,6 +55,7 @@ body{
 			#FFC829, 
 			#D19700
 		);     
+		*/
 	-moz-border-radius: 8px 0px 0px 8px;  
 	-webkit-border-top-left-radius: 8px;     	
 	-webkit-border-bottom-left-radius: 8px; 
@@ -58,11 +65,14 @@ body{
 	-webkit-box-shadow:1px 1px 5px #000;
 	box-shadow:1px 1px 5px #000;	
 	}
+.slidingMenu li a:hover {
+	color: #ddd;
+}	
 .slidingMenu li a {
 	font-size:50px;
 	text-transform:uppercase;
 	text-decoration: none;
-	color: #ddd;
+	color: rgba(126,61,27,.35);
 	outline: none;
 	text-indent:5px;
 	z-index: 10;
@@ -80,6 +90,7 @@ body{
 	position:relative;
 }
 .slidingMenuDesc div{
+	/* 
 	background: #404e55;     
 	background: 
 		-webkit-gradient(
@@ -95,6 +106,10 @@ body{
 			#999999, 
 			#404e55
 		);   	
+	*/
+	
+	background-color: rgba(66,47,2,.45);
+	
 	height: 68px;
 	padding-right:5px;
 	left:-5px;
