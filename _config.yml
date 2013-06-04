@@ -1,0 +1,26 @@
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+layouts:     ./_layouts
+include:     ['.htaccess']
+exclude:     []
+keep_files:  ['.git','.svn']
+timezone:    nil
+
+future:      true
+show_drafts: nil
+limit_posts: 0
+pygments:    true
+
+safe: true
+lsi: false
+
+permalink: /blog/:year/:month/:day/:title
+
+relative_permalinks: true
+
+paginate_path: 'page:num'
+
+markdown:      maruku
+markdown_ext:  markdown,mkd,mkdn,md
+textile_ext:   textile
