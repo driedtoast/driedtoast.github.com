@@ -1,0 +1,62 @@
+
+.posts
+  padding-left: 0
+  margin-left: 0
+
+  li
+    display: table
+    & > div
+      display: table-cell
+  
+  .post-blurb
+    padding: 5px
+    height: 100%
+    border-bottom: 1px dashed $light-grey
+    
+    a 
+      text-decoration: none
+      color: #000
+      font-weight: 500
+      font-size: 16px
+
+    .post-description
+      color: $dark-grey
+
+.post.meta
+  display: table
+
+  div
+    display: table-cell
+    vertical-align: top
+
+.post.meta
+  .date-wrapper
+    vertical-align: top
+    width: 76px
+
+.posts, .post.meta        
+  
+  .date-wrapper 
+    padding: 5px
+
+  .date
+    width: 85px
+    height: 60px
+    border: 2px solid white
+    background-color: $light-green
+    box-shadow: 2px 2px 2px 2px $shadow-color
+    padding: 3px
+    vertical-align: center
+    text-align: center
+
+    .day
+      font-weight: 500
+      font-size: 16px
+
+    .year
+      font-size: 22px
+      font-weight: 900
+
+    .day, .year
+      line-height: 0
+  

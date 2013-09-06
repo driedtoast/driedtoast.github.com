@@ -12,6 +12,8 @@ show_drafts: nil
 limit_posts: 0
 pygments:    true
 
+author: Daniel Marchant
+
 safe: true
 lsi: false
 
@@ -24,3 +26,8 @@ paginate_path: 'page:num'
 markdown:      maruku
 markdown_ext:  markdown,mkd,mkdn,md
 textile_ext:   textile
+
+# defaults
+sass:
+  syntax: sass        # scss|sass
+  style:  expanded  # nested|expanded|compact|compressed
