@@ -1,4 +1,16 @@
 
+.post
+  h2
+    color: #000
+    text-transform: normal
+    line-height: 0.5em
+
+#post 
+  > p
+    font-size: 1em
+    font-weight: 300
+    line-height: 1.5em
+
 .posts
   padding-left: 0
   margin-left: 0
@@ -10,15 +22,16 @@
   
   .post-blurb
     padding: 5px
+      bottom: 10px
     height: 100%
-    border-bottom: 1px dashed $light-grey
-    
+    font-weight: 300
+    font-size: 1em
+
     a 
       text-decoration: none
       color: #000
-      font-weight: 500
-      font-size: 16px
-
+      font-size: 1.5em
+      
     .post-description
       color: $dark-grey
 
@@ -29,32 +42,28 @@
     display: table-cell
     vertical-align: top
 
-.post.meta
-  .date-wrapper
-    vertical-align: top
-    width: 76px
+.post.meta .date-wrapper
+  width: 95px
 
 .posts, .post.meta        
   
   .date-wrapper 
-    padding: 5px
+    padding-right: 10px
 
   .date
     width: 85px
     height: 60px
-    border: 2px solid white
-    background-color: $light-green
-    box-shadow: 2px 2px 2px 2px $shadow-color
+    text-align: right
     padding: 3px
-    vertical-align: center
-    text-align: center
+      right: 10px
+    border-right: 1px solid #000
 
     .day
       font-weight: 500
-      font-size: 16px
+      font-size: 1em
 
     .year
-      font-size: 22px
+      font-size: 1.2em
       font-weight: 900
 
     .day, .year

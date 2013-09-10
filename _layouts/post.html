@@ -1,29 +1,22 @@
 ---
 layout: default
 ---
-<div id="body" class="post-content">
-	<div class="post meta">
-		<div class="date-wrapper">
-	        <div class="date">
-	      		<p class="day">
-			  	{{ page.date | date: "%B %d" }}
-				 </p>
-				 <p class="year">
-				 {{ page.date | date: "%Y" }}
-				 </p>
-	         </div> 
-	    </div>
-		<div>
-			<h2>{{ page.title }}</h2>
-			<div id="post">
-			{{ content }}
-			</div>
+
+<div class="post meta">
+	<div class="date-wrapper">
+        <div class="date">
+      		<p class="day">
+		  	{{ page.date | date: "%B %d" }}
+			 </p>
+			 <p class="year">
+			 {{ page.date | date: "%Y" }}
+			 </p>
+         </div> 
+    </div>
+	<div>
+		<h2>{{ page.title }}</h2>
+		<div id="post">
+		{{ content }}
 		</div>
 	</div>
-
-</div>
-
-    
-<div id="sidebar">
-<div id="ad-area" class="side-ad">&nbsp;</div>
 </div>

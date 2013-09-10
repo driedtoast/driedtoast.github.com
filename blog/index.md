@@ -3,9 +3,7 @@ layout: default
 title: Various crumbs of technology
 ---
 
- <div id="content" >
-  <div id="body" >
-    <h2 class="section-header">{{ page.title }}</h2>
+  <h2 class="section-header">{{ page.title }}</h2>
   {% if site.posts %}
   <ul class="posts">
     {% for post in site.posts %}
@@ -28,9 +26,4 @@ title: Various crumbs of technology
      </li>
     {% endfor %}
   </ul>
-  {% endif %}
- </div>
- <div id="sidebar">
-  <div id="ad-area" class="side-ad">&nbsp;</div>
- </div>
-</div>
+  {% endif %} 
