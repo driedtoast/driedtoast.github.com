@@ -16,3 +16,5 @@ To setup just run:
 * [Latex Equation Editor](http://www.sciweavers.org/free-online-latex-equation-editor) for math equation images 
 * [Jekyll](https://help.github.com/articles/using-jekyll-with-pages) and Github pages for site generation
 
+
+Embed a gist via `{% gist 5555251 gist.md %}`

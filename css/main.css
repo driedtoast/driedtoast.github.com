@@ -34,12 +34,12 @@
     vertical-align: top; }
 
 .post.meta .date-wrapper {
-  width: 95px; }
+  width: 65px; }
 
 .posts .date-wrapper, .post.meta .date-wrapper {
   padding-right: 10px; }
 .posts .date, .post.meta .date {
-  width: 85px;
+  width: 55px;
   height: 60px;
   text-align: right;
   padding: 3px;
@@ -54,8 +54,10 @@
   .posts .date .day, .posts .date .year, .post.meta .date .day, .post.meta .date .year {
     line-height: 0; }
 
-.post.meta div.highlight {
+.post.meta div.highlight, .post.meta div.gist {
   display: block; }
+  .post.meta div.highlight > div, .post.meta div.highlight > div > div, .post.meta div.highlight > div > div > div, .post.meta div.gist > div, .post.meta div.gist > div > div, .post.meta div.gist > div > div > div {
+    display: block; }
 
 .highlight {
   width: 100%; }

@@ -11,7 +11,7 @@ title: Various crumbs of technology
         <div class="date-wrapper">
         <div class="date">
       		<p class="day">
-		  	  {{ post.date | date: "%B %d" }}
+		  	  {{ post.date | date: "%b %d" }}
 			    </p>
 			    <p class="year">
 			    {{ post.date | date: "%Y" }}
