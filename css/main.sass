@@ -7,6 +7,13 @@ body
   padding: 4px
   font-family: sans-serif
 
+a 
+  text-decoration: none
+  color: #0088CC
+
+  &:hover, &:focus
+    color: #005580
+
 .container
   margin: 0 auto
   position: absolute
@@ -30,7 +37,6 @@ body
     a 
       font-size: 1.5em
       color: $dark-accent-color
-      text-decoration: none
       text-transform: uppercase
       
     p
@@ -42,6 +48,7 @@ body
 .header 
   display: table
   width: 100%
+  padding-top: 10px
 
 .sub-header 
   display: table
@@ -56,14 +63,13 @@ body
 
 .nav
   display: table-cell
-  width: 100%
-  vertical-align: bottom
+  width: 250px
+  vertical-align: top
   padding: 5px
   text-align: right
 
   a
-    text-decoration: none
-    color: darken($title-color, 20%)
+    color: $dark-brown
     font-size: 18px
     font-variant: small-caps
     
@@ -76,8 +82,6 @@ body
     
 .title 
   display: table-cell
-  width: 100%
-  vertical-align: bottom
   align: right
 
 #ad-area
@@ -107,15 +111,22 @@ body
   width: 234px
 
 footer
-  border-top: 1px solid #000
+  border-top: 1px solid $dark-brown
   padding: 15px 5px 5px
   display: table
   width: 100%
   
+  .social-icons, .random 
+    display: table-cell
+
   .social-icons
-    width: 150px
+    font-size: 2em
+
+    a
+      color: $dark-brown
 
   .random
     text-align: right
     font-size: 0.8em
-    width: 100%
+    text-transform: lowercase
+    color: $medium-grey

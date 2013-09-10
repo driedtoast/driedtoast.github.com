@@ -43,7 +43,7 @@ Example for a query / list find (`find({})` or `find()`):
 
 {% highlight json %} 
 {
-   users: [{id: 1, name: 'John Doe'}]	
+   "users": [  { "id": 1, "name": "John Doe"} ]	
 }
 {% endhighlight %}
 
@@ -51,7 +51,7 @@ Example for a single find query (`find(1)`):
 
 {% highlight json %} 
 {
-   user: {id: 1, name: 'John Doe'}
+   "user": { "id": 1,  "name": "John Doe" }
 }
 {% endhighlight %}
 

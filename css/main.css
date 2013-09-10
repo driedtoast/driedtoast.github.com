@@ -1,4 +1,4 @@
-.post h2 {
+#body .post h2 {
   color: black;
   text-transform: normal;
   line-height: 0.5em; }
@@ -22,7 +22,6 @@
     font-weight: 300;
     font-size: 1em; }
     .posts .post-blurb a {
-      text-decoration: none;
       color: black;
       font-size: 1.5em; }
     .posts .post-blurb .post-description {
@@ -59,15 +58,36 @@
   display: block; }
 
 .highlight {
-  border: 1px solid #f4f1f1;
-  padding: 10px;
-  width: 100%;
-  border-radius: 5px;
-  background-color: #f8fbff; }
+  width: 100%; }
+
+pre {
+  background-color: whitesmoke;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px 4px 4px 4px;
+  font-size: 0.8em;
+  line-height: 20px;
+  margin: 0 0 10px;
+  padding: 9.5px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word; }
+
+code, pre {
+  border-radius: 3px 3px 3px 3px;
+  color: #333333;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  padding: 0 3px 2px; }
 
 body {
   padding: 4px;
   font-family: sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #0088cc; }
+  a:hover, a:focus {
+    color: #005580; }
 
 .container {
   margin: 0 auto;
@@ -88,7 +108,6 @@ body {
     .projectList li a {
       font-size: 1.5em;
       color: #cdc9c9;
-      text-decoration: none;
       text-transform: uppercase; }
     .projectList li p {
       font-size: 1em;
@@ -97,7 +116,8 @@ body {
 
 .header {
   display: table;
-  width: 100%; }
+  width: 100%;
+  padding-top: 10px; }
 
 .sub-header {
   display: table;
@@ -112,13 +132,12 @@ body {
 
 .nav {
   display: table-cell;
-  width: 100%;
-  vertical-align: bottom;
+  width: 250px;
+  vertical-align: top;
   padding: 5px;
   text-align: right; }
   .nav a {
-    text-decoration: none;
-    color: #9d9d9d;
+    color: rgba(66, 47, 2, 0.85);
     font-size: 18px;
     font-variant: small-caps; }
     .nav a:after {
@@ -129,8 +148,6 @@ body {
 
 .title {
   display: table-cell;
-  width: 100%;
-  vertical-align: bottom;
   align: right; }
 
 #ad-area {
@@ -159,13 +176,18 @@ body {
   width: 234px; }
 
 footer {
-  border-top: 1px solid black;
+  border-top: 1px solid rgba(66, 47, 2, 0.85);
   padding: 15px 5px 5px;
   display: table;
   width: 100%; }
+  footer .social-icons, footer .random {
+    display: table-cell; }
   footer .social-icons {
-    width: 150px; }
+    font-size: 2em; }
+    footer .social-icons a {
+      color: rgba(66, 47, 2, 0.85); }
   footer .random {
     text-align: right;
     font-size: 0.8em;
-    width: 100%; }
+    text-transform: lowercase;
+    color: #f4f1f1; }
