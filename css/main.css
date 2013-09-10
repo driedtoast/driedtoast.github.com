@@ -13,7 +13,7 @@
   margin-left: 0; }
   .posts li {
     display: table; }
-    .posts li > div {
+    .posts li .post-blurb, .posts li .date-wrapper {
       display: table-cell; }
   .posts .post-blurb {
     padding: 5px;
@@ -29,7 +29,7 @@
 
 .post.meta {
   display: table; }
-  .post.meta div {
+  .post.meta .date-wrapper, .post.meta .post-body {
     display: table-cell;
     vertical-align: top; }
 
@@ -53,11 +53,6 @@
     font-weight: 900; }
   .posts .date .day, .posts .date .year, .post.meta .date .day, .post.meta .date .year {
     line-height: 0; }
-
-.post.meta div.highlight, .post.meta div.gist {
-  display: block; }
-  .post.meta div.highlight > div, .post.meta div.highlight > div > div, .post.meta div.highlight > div > div > div, .post.meta div.gist > div, .post.meta div.gist > div > div, .post.meta div.gist > div > div > div {
-    display: block; }
 
 .highlight {
   width: 100%; }
