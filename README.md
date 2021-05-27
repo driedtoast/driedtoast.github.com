@@ -7,6 +7,7 @@ To setup just run:
 * `rvm use ruby-2.4.1@driedtoast --create`
 * `bundle`
 * `scripts/build-sass`
+* `bundle exec jekyll serve` - to test locally
 
 
 ## Tools I'm trying out for it ##
