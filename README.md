@@ -4,7 +4,7 @@
 This my personal textual playground for blogging / writing / random things.
 
 To setup just run:
-* `rvm use ruby-1.9.3-p125@driedtoast --create`
+* `rvm use ruby-2.4.1@driedtoast --create`
 * `bundle`
 * `scripts/build-sass`
 
